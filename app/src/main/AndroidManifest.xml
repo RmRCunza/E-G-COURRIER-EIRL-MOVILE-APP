@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--Permisos-->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_eyg"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EGCOURIERAPP">
+
+        <!--Interfaces-->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--Inicio-->
+        <activity android:name=".InicioActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!--Splash Carga-->
+        <activity android:name=".SplashCargaActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!--Consultar-->
+        <activity
+            android:name=".consultar.ConsultarActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".consultar.ConsultaEyGActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- Registrar -->
+        <activity
+            android:name=".registrar.RegistrarOrigenActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".registrar.RegistrarDestinoActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".registrar.RegistrarComplementarioActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!--Recojo-->
+        <activity android:name=".recojo_busqueda.RecojoPrgmActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".recojo_busqueda.RecojoRegistroActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!--Entregar-->
+        <activity
+            android:name=".entregar.EntregaActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".entregar.EntregaTipoActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".entregar.EntregaImgActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".entregar.EntregaDatosActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!--Rezagar-->
+        <activity
+            android:name=".rezagar.RezagoActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".rezagar.RezagoDatosActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".rezagar.RezagoImagenActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!--Ruta Dia-->
+        <activity
+            android:name=".ruta.RutaDiaActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!--Previsualizaciones-->
+        <activity
+            android:name=".ImagenCompletaActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

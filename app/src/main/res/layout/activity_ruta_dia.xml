@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_app">
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Header -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/header_color_default"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageButton
+                android:id="@+id/btnMenu"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="-20dp"
+
+                android:background="@drawable/boton_menu_background"
+
+                android:padding="8dp"
+
+                android:scaleType="fitCenter"
+
+                android:src="@drawable/icono_menu"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RUTA DE DIA"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="italic"
+
+                app:layout_constraintStart_toEndOf="@id/btnMenu"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="-15dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- FORMULARIO -->
+
+        <ScrollView
+            android:id="@+id/scrollFormulario"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- NUMERO DEL SERVICIO -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="Total de pedidos"
+                    android:textStyle="bold"
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="3"
+                    android:textColor="#FFFFFF"/>
+
+                <!-- Simulacion de boton guia ciente-->
+
+                <LinearLayout
+                    android:id="@+id/layoutResultado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#c0c0c0"
+                    android:layout_marginTop="35dp">
+
+                    <TextView
+                        android:id="@+id/tvCliente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/header_color_default"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Cliente : 1"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvFecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Fecha : 02/09/2026"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/tvDestinatario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Destinatario :"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/tvOrigen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Origen :"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/tvDestino"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Destino :"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutResultado2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#c0c0c0"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/tvCliente2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/header_color_default"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Cliente : 2"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvFecha2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Fecha : 02/09/2026"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/tvDestinatario2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Destinatario :"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/tvOrigen2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Origen :"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/tvDestino2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Destino :"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutResultado3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#c0c0c0"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/tvCliente3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/header_color_default"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Cliente : 3"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvFecha3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Fecha : 02/09/2026"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/tvDestinatario3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Destinatario :"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/tvOrigen3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Origen :"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/tvDestino3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Destino :"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- MENÚ LATERAL -->
+    <LinearLayout
+        android:id="@+id/menuLateral"
+        android:layout_width="280dp"
+        android:layout_height="460dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/menu_background"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <!-- CONSULTAR -->
+        <LinearLayout
+            android:id="@+id/opConsultar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/menu_item_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icono_consultar_menu_movil"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Consultar"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+        </LinearLayout>
+
+        <!-- REGISTRAR -->
+        <LinearLayout
+            android:id="@+id/opRegistrar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/menu_item_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icono_registrar_menu_movil"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Registrar"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+        </LinearLayout>
+
+        <!-- RECOJO -->
+        <LinearLayout
+            android:id="@+id/opRecojo"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/menu_item_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icono_recojo_menu_movil"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Recojo"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+        </LinearLayout>
+
+        <!-- ENTREGA -->
+        <LinearLayout
+            android:id="@+id/opEntrega"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/menu_item_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icono_entrega_menu_movil"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Entrega"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+        </LinearLayout>
+
+        <!-- REZAGO -->
+        <LinearLayout
+            android:id="@+id/opRezago"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/menu_item_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icono_rezago_menu_movil"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Rezago"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+        </LinearLayout>
+
+        <!-- RUTA DIA -->
+        <LinearLayout
+            android:id="@+id/opRutaDia"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/menu_item_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icono_ruta_menu_movil"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Ruta Dia"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+        </LinearLayout>
+
+        <!-- Salir -->
+        <LinearLayout
+            android:id="@+id/opSalir"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/menu_item_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icono_salir_menu_movil"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Salir"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
