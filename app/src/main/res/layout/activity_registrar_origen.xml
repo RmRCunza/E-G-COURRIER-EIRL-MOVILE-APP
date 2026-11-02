@@ -114,7 +114,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="DNI"
-                    android:textColorHint="#909191"/>/>
+                    android:textColorHint="#909191"/>
 
                 <!-- CLIENTE -->
                 <TextView
@@ -229,6 +229,7 @@
 
                 <Spinner
                     android:id="@+id/spProvincia"
+                    android:background="#b3b3b3"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"/>/>
 
